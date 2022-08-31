@@ -26,18 +26,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addButton(_ sender: UIButton) {
-        print(1)
         if titleList.contains(titleTF.text ?? "") {
             titleTF.text = "this movie is added"
             yearTF.text = ""
-            print(2)
         } else {
             titleList.append(titleTF.text ?? "")
             yearList.append(yearTF.text ?? "")
             tableView.reloadData()
             titleTF.text = ""
             yearTF.text = ""
-            print(3)
         }
     }
 }
